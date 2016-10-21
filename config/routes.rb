@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   get '/' => 'home#index', as: :home
   get '/about' => 'home#about'
 
+  resources :discussions do
+
+    resources :comments
+  end
 
 
 end
